@@ -2,6 +2,10 @@
 import React from 'react';
 // need to import ReactDOM to insert component into the DOM
 import ReactDOM from 'react-dom';
+//import the const from the component
+import SearchBar from './components/search_bar';
+// YouTube API Key
+const API_KEY = "AIzaSyCbyCp9lgQtSGsadfi2sp0mySjEScSIb1Y";
 
 // Create a new component. This component should producer some HTML
 
@@ -13,7 +17,11 @@ import ReactDOM from 'react-dom';
 
 // This takes the function above and moves it into ES6 syntax
 const App = () => {
-  return <div>Hi!</div>;
+  return (
+    <div>
+      <SearchBar />
+    </div>
+  )
 }
 
 // Take this component's generated HTML and put it on the page (in the DOM)
