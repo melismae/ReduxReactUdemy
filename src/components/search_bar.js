@@ -29,19 +29,18 @@ class SearchBar extends Component {
   // }
   //
   // // event handler always called with the event object - describes what happened
-  // onInputChange(event) {
-  //   console.log(event);
-  // }
+  onInputChange(term) {
+    this.setState({term});
+    this.props.onSearchTermChange(term);
+  }
 
   // 2 - ES6 syntax in the onChange handler
   render() {
     return (
-      <div>
+      <div className="search-bar">
         <input
           value={this.state.term}
-          onChange={event => this.setState({ term: event.target.value })} />
-        <input
-          value={this.state.term}
+          onChange={event => this.onInputChange(event.target.value)}
         />
       </div>
     );
