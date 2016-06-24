@@ -1,9 +1,11 @@
 import { combineReducers } from 'redux';
 import BooksReducer from './reducer_books';
+import ActiveBook from './reducer_active_book';
 
 const rootReducer = combineReducers({
-  //state books equals the outcome of bookReducer
-  books: BooksReducer
+  //state books equals the outcome of these reducers
+  books: BooksReducer,
+  activeBook: ActiveBook
 });
 
 export default rootReducer;
